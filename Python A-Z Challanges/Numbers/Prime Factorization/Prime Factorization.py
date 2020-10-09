@@ -5,8 +5,14 @@ def factorize(nr):
     i = 2
     factors = []
     while i <= nr:
-        if nr / i != 0:
+        if nr % i == 0:
             factors.append(i)
+            nr = nr / i
         else:
-            i += 1
+            i = i + 1
     print(factors)
+
+factorize(9)
+factorize(1024988651)
+factorize(0)
+factorize(87946489641631564891213499157451621)
